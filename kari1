@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ページ振り分けデモ</title>
+</head>
+<body>
+<h1>キーワードでページ振り分け</h1>
+<p>「9」と入力すると正解ページへ、それ以外は不正解ページへ</p>
+
+<form id="checkForm">
+  <input type="text" id="userInput" placeholder="数字を入力">
+  <button type="submit">送信</button>
+</form>
+
+<script>
+document.getElementById('checkForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const text = document.getElementById('userInput').value.trim();
+
+  if (text === "9") {
+    // 正解ページ（外部リンク）
+    window.location.href = "https://kariaiue.my.canva.site/seikai";
+  } else {
+    // 不正解ページ（外部リンク）
+    window.location.href = "https://kariaiue.my.canva.site/huseikai";
+  }
+});
+</script>
+</body>
+</html>

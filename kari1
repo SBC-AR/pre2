@@ -3,6 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>ページ振り分けデモ</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f6f8;
+    padding: 50px;
+  }
+  h1 {
+    color: #333;
+  }
+  input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
 </head>
 <body>
 <h1>キーワードでページ振り分け</h1>
@@ -19,10 +51,10 @@ document.getElementById('checkForm').addEventListener('submit', function(event) 
   const text = document.getElementById('userInput').value.trim();
 
   if (text === "9") {
-    // 正解ページ（外部リンク）
+    // ✅ 正解ページ（外部リンク） - ここを差し替えてください
     window.location.href = "https://kariaiue.my.canva.site/seikai";
   } else {
-    // 不正解ページ（外部リンク）
+    // ❌ 不正解ページ（外部リンク） - ここを差し替えてください
     window.location.href = "https://kariaiue.my.canva.site/huseikai";
   }
 });
